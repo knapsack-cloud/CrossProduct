@@ -66,3 +66,20 @@ extension CrossProduct: Collection {
 	@inlinable public func index(after i: Int) -> Int { crossProduct.index(after: i) }
 	
 }
+
+extension Crossable {
+	
+	init?(_ crossable: some Crossable) {
+		
+		guard let yourself = crossable as? Self else { return nil }
+		self = yourself
+		
+	}
+
+	init(_ crossable: some Crossable, default: Self) {
+		
+		self = (crossable as? Self) ?? `default`
+		
+	}
+	
+}

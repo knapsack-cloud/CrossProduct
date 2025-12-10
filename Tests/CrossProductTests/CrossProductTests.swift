@@ -1,6 +1,7 @@
 import Testing
-@testable import CrossProduct
 import Algorithms
+
+@testable import CrossProduct
 
 extension String: Crossable {}
 
