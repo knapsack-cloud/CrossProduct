@@ -69,14 +69,14 @@ extension CrossProduct: Collection {
 
 extension Crossable {
 	
-	init?(_ crossable: some Crossable) {
+	public init?(_ crossable: some Crossable) {
 		
 		guard let yourself = crossable as? Self else { return nil }
 		self = yourself
 		
 	}
 
-	init(_ crossable: some Crossable, default: Self) {
+	public init(_ crossable: some Crossable, default: Self) {
 		
 		self = (crossable as? Self) ?? `default`
 		
